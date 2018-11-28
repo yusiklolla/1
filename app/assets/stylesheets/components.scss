@@ -1,0 +1,68 @@
+// Bootstrap mixins
+@import "/app/assets/stylesheets/bootstrap/_mixins.scss";
+// Reset and dependencies
+@import "/app/assets/stylesheets/bootstrap/_print.scss";
+// Core CSS
+@import "/app/assets/stylesheets/bootstrap/_root.scss";
+@import "/app/assets/stylesheets/bootstrap/_reboot.scss";
+@import "/app/assets/stylesheets/bootstrap/_type.scss";
+@import "/app/assets/stylesheets/bootstrap/_images.scss";
+@import "/app/assets/stylesheets/bootstrap/_code.scss";
+@import "/app/assets/stylesheets/bootstrap/_grid.scss";
+@import "/app/assets/stylesheets/bootstrap/_tables.scss";
+@import "/app/assets/stylesheets/bootstrap/_forms.scss";
+@import "/app/assets/stylesheets/bootstrap/_buttons.scss";
+// Components
+@import "/app/assets/stylesheets/bootstrap/_transitions.scss";
+@import "/app/assets/stylesheets/bootstrap/_dropdown.scss";
+@import "/app/assets/stylesheets/bootstrap/_button-group.scss";
+@import "/app/assets/stylesheets/bootstrap/_input-group.scss";
+@import "/app/assets/stylesheets/bootstrap/_custom-forms.scss";
+@import "/app/assets/stylesheets/bootstrap/_nav.scss";
+@import "/app/assets/stylesheets/bootstrap/_navbar.scss";
+@import "/app/assets/stylesheets/bootstrap/_card.scss";
+@import "/app/assets/stylesheets/bootstrap/_breadcrumb.scss";
+@import "/app/assets/stylesheets/bootstrap/_pagination.scss";
+@import "/app/assets/stylesheets/bootstrap/_badge.scss";
+@import "/app/assets/stylesheets/bootstrap/_jumbotron.scss";
+@import "/app/assets/stylesheets/bootstrap/_alert.scss";
+@import "/app/assets/stylesheets/bootstrap/_progress.scss";
+@import "/app/assets/stylesheets/bootstrap/_media.scss";
+@import "/app/assets/stylesheets/bootstrap/_list-group.scss";
+@import "/app/assets/stylesheets/bootstrap/_close.scss";
+// Components w/ JavaScript
+@import "/app/assets/stylesheets/bootstrap/_modal.scss";
+@import "/app/assets/stylesheets/bootstrap/_tooltip.scss";
+@import "/app/assets/stylesheets/bootstrap/_popover.scss";
+@import "/app/assets/stylesheets/bootstrap/_carousel.scss";
+// Utility classes
+@import "./bootstrap/_utilities.scss";
+// Extended Bootstrap components
+@import "/app/assets/stylesheets/custom/type-custom.scss";
+@import "/app/assets/stylesheets/custom/alerts-custom.scss";
+@import "/app/assets/stylesheets/custom/buttons-custom.scss";
+@import "/app/assets/stylesheets/custom/buttons-radius.scss";
+@import "/app/assets/stylesheets/custom/modals-custom.scss";
+@import "/app/assets/stylesheets/custom/container-custom.scss";
+@import "/app/assets/stylesheets/custom/dropdowns-custom.scss";
+// Custom theme components
+@import "/app/assets/stylesheets/custom/icons.scss";
+@import "/app/assets/stylesheets/custom/text-inherit.scss";
+@import "/app/assets/stylesheets/custom/navbar-utilities.scss";
+@import "/app/assets/stylesheets/custom/nav-bordered.scss";
+@import "/app/assets/stylesheets/custom/zoom.scss";
+@import "/app/assets/stylesheets/custom/avatar-list.scss";
+@import "/app/assets/stylesheets/custom/growl.scss";
+@import "/app/assets/stylesheets/custom/profile-header.scss";
+@import "/app/assets/stylesheets/custom/media-list.scss";
+@import "/app/assets/stylesheets/custom/media-list-stream.scss";
+@import "/app/assets/stylesheets/custom/media-list-conversation.scss";
+@import "/app/assets/stylesheets/custom/media-list-users.scss";
+@import "/app/assets/stylesheets/custom/cards-profile.scss";
+@import "/app/assets/stylesheets/custom/cards-link-list.scss";
+
+// override
+html {
+  // set optimal base size
+  font-size: 12px;
+}

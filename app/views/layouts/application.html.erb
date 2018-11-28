@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ru">
+<head>
+  <title>Vestida15</title>
+  <%= csp_meta_tag %>
+  <%= csrf_meta_tag %>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <%= stylesheet_link_tag '/app/assets/stylesheets/bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '/app/assets/stylesheets/toolkit.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '/app/assets/stylesheets/variables', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <%= stylesheet_link_tag '/app/assets/stylesheets/application.scss', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+
+  <style>
+    /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+    /* this chunk of css is not part of the toolkit :) */
+    body {
+      width: 1px;
+      min-width: 100%;
+      *width: 100%;
+    }
+
+  </style>
+
+</head>
+
+
+<body class="bob">
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-blue border-bottom box-shadow">
+  <h1 class="my-0 mr-md-auto font-weight-bold "><%= link_to 'VestiDa', home_path %></h1>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <span class="p-2 text-dark"><%= link_to "Добавить статью", new_post_path %></span>
+    <span class="p-2 text-dark">О проекте</span>
+  </nav>
+  <span class="btn btn-outline-primary">Вход для авторов</span>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+
+<%= javascript_include_tag '/app/assets/javascripts/application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag '/app/assets/javascripts/toolkit', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag '/app/assets/javascripts/jquery.min', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag '/app/assets/javascripts/popper.min', 'data-turbolinks-track': 'reload' %>
+
+</body>
+</html>

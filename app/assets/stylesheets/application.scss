@@ -1,0 +1,248 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+//= require ./app/assets/stylesheets/bootstrap/_functions.scss
+//= require ./app/assets/stylesheets/variables.scss
+@import "/app/assets/stylesheets/bootstrap/functions";
+@import "/app/assets/stylesheets/variables";
+@import "bootstrap";
+@import "toolkit";
+
+/*
+ * Application level styles
+ * (things that dont make sense in a toolkit :)
+ * copyright @colossal 2018
+ */
+
+/* docs overrides */
+.highlight {
+  background-color: #fff;
+  border-color: #d3e0e9;
+}
+
+
+/* general overrides */
+.list-group-item .glyphicon {
+  line-height: 1.4;
+}
+
+.modal-header .close {
+  padding-top: 1.4rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+/* navbar */
+.app-navbar {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-navbar .form-control {
+  box-shadow: none;
+}
+
+.app-navbar .navbar-brand img {
+  width: 85px;
+}
+
+.app-navbar .navbar-collapse {
+  max-height: inherit;
+}
+
+.app-navbar .navbar-collapse:after {
+  height: 100vh;
+}
+
+.app-navbar .form-control {
+  border-color: #1C73A5;
+}
+
+.app-navbar .app-notifications {
+  margin-left: 1rem;
+  padding-bottom: 4px !important;
+  padding-top: 4px !important;
+}
+
+.app-notifications .icon:before {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .app-navbar .navbar-collapse:after {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-search {
+    margin-top: -1px;
+  }
+}
+
+
+/* misc */
+.app-login-form {
+  max-width: 280px;
+  margin-top: -60px;
+}
+
+.app-new-msg {
+  margin-right: 10px;
+}
+
+.app-brand {
+  width: 40%;
+  display: inline-block;
+}
+
+.app-brand img {
+  width: 100%;
+}
+
+
+// Gray scale
+$gray-100: #f5f8fa;
+$gray-200: #d4dbe0;
+$gray-300: #9da9b0;
+$gray-500: #536570;
+$gray-700: #1e3948;
+$gray-800: #122a38;
+// Brand Scale
+$theme-colors: (
+        primary: #3097D1,
+        secondary: $gray-200,
+        success: #5cb85c,
+        info: #5bc0de,
+        warning: #f0ad4e,
+        danger: #d9534f,
+        light: $gray-100,
+        dark: $gray-800
+);
+
+// deleted bs.4 vars
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-size-xs: .75rem !default;
+$nav-tabs-active-link-hover-bg: $body-bg !default;
+// icons
+$icon-font-path: "../fonts/";
+$icon-font-name: "toolkit-entypo";
+// Body
+$body-bg: #f5f8fa;
+// Component borders
+// Create a custom variable to base the border-color off the body background.
+$toolkit-border-color: darken(#f5f8fa, 10%);
+// Then apply that to key components
+$panel-default-border: $toolkit-border-color;
+$panel-inner-border: $toolkit-border-color;
+$panel-footer-bg: $body-bg;
+$list-group-border: $toolkit-border-color;
+$navbar-border: $toolkit-border-color;
+// link and button colors
+$link-color: theme-color("primary");
+// alerts
+$alert-warning-border: #E6D0A1;
+// Text Color
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$text-color: $gray-700;
+$letter-spacing-base: 0;
+$line-height-base: 1.6;
+$font-weight-base: 300;
+// Main typography
+$font-size-root: 14px;
+// lead
+$lead-font-size: floor(($font-size-base * 1.15));
+$lead-font-size-sm: floor(($font-size-base * 1.5));
+$lead-font-weight: 300;
+$lead-line-height: 1.4;
+$lead-letter-spacing: 0;
+// Headings
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+// Btns
+$btn-font-size: $font-size-base;
+$btn-text-transform: default;
+$btn-letter-spacing: none;
+$btn-default-color: #536570;
+$btn-default-bg: #fff;
+$btn-default-border: #d4dbe0;
+$btn-toolbar-divider-bg: $gray-200;
+// Inputs
+$input-border: #d4dbe0;
+$input-color-placeholder: $gray-300;
+// z-index
+$zindex-zoom: 1080;
+$zindex-growl: 1090;
+$container-max-widths: (
+        lg: 960px + $grid-gutter-width,
+        xl: 1200px + $grid-gutter-width
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+// navbar
+$navbar-margin-bottom: 0;
+$navbar-nav-active-font-weight: inherit;
+$navbar-inverse-color: rgba(255, 255, 255, .5);
+$navbar-inverse-bg: theme-color("primary");
+$navbar-inverse-border: #1C73A5;
+$navbar-inverse-hover-color: rgba(255, 255, 255, .8);
+$navbar-inverse-active-color: #fff;
+$navbar-inverse-toggle-border-color: #1C73A5;
+$navbar-inverse-toggle-hover-bg: darken($navbar-inverse-bg, 2%);
+$nav-item-inline-spacer: 2rem;
+// nav hover
+$nav-link-hover-bg: $gray-100;
+// nav bordered
+$nav-bordered-color: inherit;
+$nav-bordered-color-active: theme-color("primary");
+$nav-bordered-font-weight: 300;
+$nav-bordered-font-weight-active: 500;
+// popover
+$popover-fallback-border-color: $gray-200;
+$popover-border-color: $gray-200;
+// modal
+$modal-content-fallback-border-color: $gray-300;
+// misc colors
+$headings-small-color: inherit;
+// dropdowns
+$dropdown-link-color: $navbar-light-color;
+$dropdown-border: rgba(0, 0, 0, .05);
+$dropdown-padding: 10px 0;
+$dropdown-item-padding-y: 5px;
+$dropdown-item-padding-x: 20px;
+$dropdown-link-hover-bg: $gray-100;
+// Spacing
+$spacer: 20px;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+// zoom
+$zoom-overlay-bg: #fff;
+// list group
+$list-group-hover-bg: $gray-100;
+// Custom forms
+$custom-select-color: $input-color;
+$custom-select-bg: $input-bg;
+$custom-select-disabled-bg: $input-disabled-bg;
+$custom-control-indicator-bg: $input-bg;
+$custom-control-indicator-border: rgba(0, 0, 0, .15);
+$custom-control-indicator-checked-bg: theme-color("primary");
+$custom-control-indicator-checked-border: theme-color("primary");
+$custom-control-indicator-active-bg: lighten(theme-color("primary"), 15%);
+$custom-control-indicator-active-border: lighten(theme-color("primary"), 15%);
+$custom-control-indicator-disabled-bg: darken($input-bg, 5%);
+$custom-control-indicator-disabled-border: $custom-control-indicator-border;
